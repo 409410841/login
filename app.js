@@ -14,7 +14,6 @@ app.use(express.static('public')); // 提供前端檔案
 
 const PORT = process.env.PORT || 3000;
 
-require('dotenv').config();
 
 async function testConnection() {
     try {

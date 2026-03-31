@@ -1,8 +1,10 @@
 const { Pool } = require('pg');
 
+require('dotenv').config();
+
 // 建立資料庫連線池
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL || 'postgresql://bill:5vUFqd5topczs2mWxp8aR9c28VqP91Pq@dpg-d70hbq7fte5s73eedp3g-a.oregon-postgres.render.com/mydata_9cjx',
+  connectionString: process.env.DATABASE_URL ,
   ssl: { rejectUnauthorized: false } // Render 必須
 });
 
